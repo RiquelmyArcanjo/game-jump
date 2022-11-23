@@ -99,10 +99,7 @@
 
 @media (max-width: 600px)
 {
-    .pipe{
-        animation: pipe-animation 2s infinite linear;
-    }
     .jump{
-        animation: avatar-jump 1800ms ease-out;
+        animation: avatar-jump 1200ms ease-out;
     }
 }
