@@ -11,12 +11,13 @@
     position: relative;
     overflow: hidden; /*o que estiver fora não aparece*/
     background: linear-gradient(#87CEEB, #E0F6FF);
+    margin-bottom: 50px;
 }
 .pipe{
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1s infinite linear;
+    animation: pipe-animation 1.7s infinite linear;
 }
 .avatar {
     width: 150px;
@@ -32,7 +33,33 @@
     position: absolute;
     width: 550px;
     animation: clouds-animation 30s infinite linear;
-} 
+}
+
+#btnReiniciar {
+    border: none;
+    padding: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 5px;
+
+    background-color: rgb(75, 200, 138);
+    outline: none;
+    color: rgb(27, 66, 50);
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: arial, sans-serif;
+}
+
+#btnReiniciar:hover {
+    background-color: rgb(116, 158, 137);
+}
+.out-game-board{
+    display: block;
+    text-align: -webkit-center;
+}
 
 @keyframes pipe-animation {
     from {
@@ -67,5 +94,15 @@
     }
     to {
         right: 100%;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .pipe{
+        animation: pipe-animation 2s infinite linear;
+    }
+    .jump{
+        animation: avatar-jump 1200ms ease-out;
     }
 }

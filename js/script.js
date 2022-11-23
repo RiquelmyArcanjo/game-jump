@@ -5,9 +5,17 @@ const clouds = document.querySelector('.clouds');
 const jump = () => {
     avatar.classList.add('jump');
 
-    setTimeout(() =>{
-        avatar.classList.remove('jump');
-    }, 500)
+    if (window.matchMedia("(max-width:600px)").matches) {
+        setTimeout(() =>{
+            avatar.classList.remove('jump');
+        }, 1000)
+    }
+    else{
+        setTimeout(() =>{
+            avatar.classList.remove('jump');
+        }, 500)
+    }
+
 }
 
 const loop = setInterval(() => {
@@ -36,5 +44,5 @@ const loop = setInterval(() => {
     
 }, 10);
 
-document.addEventListener('keydown', jump);
 document.addEventListener('mousedown', jump);
+document.addEventListener('keydown', jump);
