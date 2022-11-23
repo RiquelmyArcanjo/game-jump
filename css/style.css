@@ -103,6 +103,6 @@
         animation: pipe-animation 2s infinite linear;
     }
     .jump{
-        animation: avatar-jump 1500ms ease-out;
+        animation: avatar-jump 1800ms ease-out;
     }
 }

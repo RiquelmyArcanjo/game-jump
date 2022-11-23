@@ -8,7 +8,7 @@ const jump = () => {
     if (window.matchMedia("(max-width:600px)").matches) {
         setTimeout(() =>{
             avatar.classList.remove('jump');
-        }, 1500)
+        }, 1800)
     }
     else{
         setTimeout(() =>{
