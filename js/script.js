@@ -71,7 +71,10 @@ const loop = setInterval(() => {
         document.getElementById('game-over').style.display = 'block';
         document.getElementById('game-over').style.marginLeft = 'auto';
         document.getElementById('game-over').style.marginRight = 'auto';
-        document.getElementById('game-over').style.width = '400px';
+        
+        if (window.matchMedia("(max-width:600px)").matches) {
+            document.getElementById('game-over').style.width = '250px';
+        }
 
         clouds.style.animation = 'none';
         clouds.style.right = `${cloudsPosition}px`;
