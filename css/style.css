@@ -26,7 +26,8 @@
 .avatar {
     width: 150px;
     position:absolute;
-    bottom: 0;    
+    bottom: 0;
+    z-index:10;
 }
 
 .jump{
@@ -86,7 +87,6 @@
 .out-game-board{
     display: block;
     text-align: -webkit-center;
-    
 }
 
 @keyframes pipe-animation {

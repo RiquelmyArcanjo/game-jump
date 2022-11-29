@@ -1,16 +1,19 @@
 const avatar = document.querySelector('.avatar');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
+const rip = './images/rip.png';
 const gameover = './images/game-over.gif';
 let segundos = 0;
 let minutos = 0;
 
+//Gerador numero inteiro random
 function numeroInteiroRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+//Tempo jogo
 function segundo(){
     //incrementa os segundos
     segundos++;
@@ -26,10 +29,9 @@ function segundo(){
     document.getElementById('segundo').innerHTML=segundos
     
 }
-
 const cronometro = setInterval(function(){ segundo() },1000)
 
-
+//Pulo avatar
 const jump = () => {
     avatar.classList.add('jump');
 
@@ -60,11 +62,16 @@ const loop = setInterval(() => {
         pipe.style.left = `${pipePosition}px`;
 
         avatar.style.animation = 'none';
-        //avatar.style.bottom = `${avatarPosition}px`;
 
-        avatar.src = gameover;
-        avatar.style.width = '350px';
-        avatar.style.marginLeft = '700px';
+        avatar.src = rip;
+        avatar.style.width = '135px';
+        avatar.style.marginLeft = '25px';
+        pipe.src = '';
+        document.getElementById('game-over').src = gameover;
+        document.getElementById('game-over').style.display = 'block';
+        document.getElementById('game-over').style.marginLeft = 'auto';
+        document.getElementById('game-over').style.marginRight = 'auto';
+        document.getElementById('game-over').style.width = '400px';
 
         clouds.style.animation = 'none';
         clouds.style.right = `${cloudsPosition}px`;
@@ -80,6 +87,7 @@ const loop = setInterval(() => {
     
 }, 10);
 
+//Clique e teclado -> jump()
 document.addEventListener('mousedown', jump);
 document.addEventListener('keydown', jump);
 
