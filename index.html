@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,20 @@
 </head>
 <body>
     <div class="game-board">
+        <div class="cronometro"><span id="minuto">00</span><span>:</span><span id="segundo">00</span></div>
         <img src="./images/clouds.png" class="clouds" alt="">
         <img src="images/avatar.gif" class="avatar" alt="">
         <img src="images/pipe.png" class="pipe" alt="">
     </div>
     <div class="out-game-board">
-        <a href="index.html" id="btnReiniciar">Reiniciar Game</a>
+        <a href="index.html" id="btnIniciar">Reiniciar Jogo</a>
+
     </div>
-    
+    <audio id="musica-fundo">
+        <source src="" type="audio/mp3">
+    </audio>
+    <audio id="audio-game-over">
+        <source src="" type="audio/mp3">
+    </audio>
 </body>
 </html>
