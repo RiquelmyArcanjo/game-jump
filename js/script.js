@@ -45,10 +45,17 @@ const jump = () => {
             avatar.classList.remove('jump');
         }, 500)
     }
-    
-    document.getElementById('musica-fundo').src = 'audios/jump/'+ numeroInteiroRandom(0, 15) + '.mp3';
+    //Inicia musica fundo
     document.getElementById('musica-fundo').play();
+
+    //Audios de pulo
+    document.getElementById('audio-pulo').src = 'audios/jump/'+ numeroInteiroRandom(0, 15) + '.mp3';
+    document.getElementById('audio-pulo').play();
+    
+
 }
+//Setando volume da musica de fundo
+document.getElementById('musica-fundo').volume = 0.3;
 
 //Jogador perde
 const loop = setInterval(() => {
@@ -85,6 +92,7 @@ const loop = setInterval(() => {
         clearInterval(cronometro);
 
         document.getElementById('musica-fundo').volume = 0.0;
+        document.getElementById('audio-pulo').volume = 0.0;
         document.getElementById('audio-game-over').src = 'audios/game-over/'+ numeroInteiroRandom(0, 5) + '.mp3';
         document.getElementById('audio-game-over').play();
     }
